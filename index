@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W.R.E.C'kd | Wilderness Running & Endurance Collective</title>
+    <style>
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --gray: #f0f0f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--black);
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.5;
+            padding: 2rem;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 2px solid var(--black);
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            background-color: var(--black);
+            color: var(--white);
+            display: inline-block;
+            padding: 2px 12px;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        nav {
+            margin-bottom: 3rem;
+            display: flex;
+            gap: 0;
+            border: 1px solid var(--black);
+            width: fit-content;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            font-family: 'Courier New', Courier, monospace;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--black);
+        }
+
+        nav button:not(:last-child) {
+            border-right: 1px solid var(--black);
+        }
+
+        nav button.active {
+            background-color: var(--black);
+            color: var(--white);
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        h2 {
+            border-bottom: 1px solid var(--black);
+            display: inline-block;
+            margin: 2.5rem 0 1rem;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        p, ul {
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            border: 1px solid var(--black);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .highlight-box::before {
+            content: "NB";
+            position: absolute;
+            top: -12px;
+            left: 10px;
+            background: var(--white);
+            padding: 0 5px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.85rem;
+        }
+
+        th, td {
+            border: 1px solid var(--black);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--gray);
+            text-transform: uppercase;
+        }
+
+        .footer {
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--black);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-sim {
+            border: 1px solid var(--black);
+            padding: 30px;
+            margin-top: 2rem;
+        }
+
+        .form-line {
+            border-bottom: 1px solid var(--black);
+            height: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 600px) {
+            body { padding: 1.5rem; }
+            h1 { font-size: 1.8rem; }
+            nav { width: 100%; flex-direction: column; }
+            nav button:not(:last-child) { border-right: none; border-bottom: 1px solid var(--black); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>W.R.E.C'kd</h1>
+        <p class="tagline">Wilderness Running & Endurance Collective Inc.</p>
+        <p><i>Incorporate a Society</i></p>
+    </header>
+
+    <nav>
+        <button onclick="showPage('manifesto')" id="btn-manifesto" class="active">01. Manifesto</button>
+        <button onclick="showPage('operations')" id="btn-operations">02. Operations / FAQ</button>
+    </nav>
+
+    <!-- PAGE 1: MANIFESTO -->
+    <div id="manifesto" class="section active">
+        <h2>[01. Object]</h2>
+        <p>Facilitate and encourage the pursuit of endurance and adventure running through organised and hosted events for the benefit of members.</p>
+
+        <h2>[02. Context]</h2>
+        <p>Classic and grassroots wilderness races are disappearing due to administrative burden and compliance costs. These events have never been about commercial gain. There were never sponsors, loot bags, big banners and affiliate marketing. There wasn’t the wait lists, or festival line-ups of the modern day event.</p>
+        <p>Establishing an organised group allows for certain specific exemption to regulations, concessions, and healthy and safety legislation.</p>
+        <p>Compliance costs and administrative burden would be avoided by establishing an incorporated society, undertaking non-commercial recreational activity of its members.</p>
+        
+        <div class="highlight-box">
+            <p><strong>Conservation Act</strong> s17O(4) Conservation Act 1987 provides an exemption from needing a DOC concession for certain activities on public conservation land</p>
+            <p>A club, society, or group can run activities for its own members on conservation land without a concession, as long as the activity is non-commercial.</p>
+            <p>The activity must not be promoted or operated as a commercial event, and not be open to the general public in the way a paid race would be.</p>
+        </div>
+
+        <h2>[03. Membership]</h2>
+        <p>Participation requires formal membership in the Incorporated Society.</p>
+        <ul>
+            <li>- Events are strictly member-only.</li>
+            <li>- No public entries or external marketing.</li>
+            <li>- Fees are purely for cost-recovery.</li>
+        </ul>
+
+        <h2>[04. Health and Safety]</h2>
+        <p>Ensuring a safe adventures, does not mean hiding behind legalistic paperwork.</p>
+        <ul>
+            <li>- Most community groups don’t have duties under the HSW Act</li>
+            <li>- W.R.E.C’kd would be volunteer-led to avoid WorkSafe obligations.</li>
+            <li>- We have ACC.</li>
+            <li>- Members would be responsible for themselves.</li>
+        </ul>
+        <div class="highlight-box">
+            <p><strong>HSW Act</strong> a “volunteer association” is largely exempt from the Act’s main duties</p>
+            <p>A volunteer association is not a PCBU (Person Conducting a Business or Undertaking).</p>
+            <p>Activities carried out by a sports club or association for its members, where the activity is non-commercial are excluded from The <strong>HSW (Adventure Activities) Regulations 2016</strong></p>
+        </div>
+    </div>
+
+    <!-- PAGE 2: OPERATIONS & FAQ -->
+    <div id="operations" class="section">
+        <h2>[05. Comparison]</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Commercial Entity (Trust, Ltd, Partnership etc.)</th>
+                    <th>Inc. Society</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Classification</td>
+                    <td>PCBU (Business)</td>
+                    <td>Volunteer Association / Club / Organised Group</td>
+                </tr>
+                <tr>
+                    <td>Safety Duty</td>
+                    <td>HSWA 2015 and HSW Adventure Reg. 2016</td>
+                    <td>Personal Responsibility</td>
+                </tr>
+                <tr>
+                    <td>Structure</td>
+                    <td>Profit-driven</td>
+                    <td>Membership Subscriptions and appropriate cost-recovery</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>[06. Admin]</h2>
+       <p><strong> Incorporated Societies</strong> must set and follow rules, have members atleast 10, and committee.
+       <p>There would be a Constitution, AGMs and elections...registers and finances</p>
+       <p>There would be limited admin of members, they'd just need be good human of the mountains</p>
+       <p>Uncool-possibly?; Getting the boring done, so the fun can happen?-Yes!</p>
+       <p>WRECK'kd could be affliated with the Federated Mountain Clubs, for advocacy and member benefits</p>
+
+        <h2>[07. FAQ]</h2>
+        <p><strong>Is this legal?</strong><br>Yes. This follows the established model of tramping and recreation clubs. Just the type of recreation is leaning into Type II and III fun.</p>
+        <p>Events can still be timed, the results would be of the members. It can still be recreation even with a stop-watch.</p>
+        <p>We could still encourage membership.</p>
+        <p><strong>An example?</strong><br>See Fearsociety.co.nz or Hüttcross Inc. which subscribes members on race entry.</p>
+
+        <p><strong>Who manages the events?</strong><br>The society must remain volunteer-led to avoid scutiny, and keep costs accessible to all members.</p>
+        <p>The events can be run by the usual people, however they needn't deal with mountains of paperwork.</p>
+
+        <p><strong>What makes it different from Big Sunday Runs (BSR)?</strong><br>Its formal, but maybe not as regulated as an Athlettuce NZ club. BSR runners might be members of W.R.E.C’kd, but not all W.R.E.C’kd members would identify BSR.You could still hold membership with Trentham United, Thorndon Bridge Club and the Wellington Canoe Polo Association</p>
+        
+
+        <h2>[07. Phase 1 Setup]</h2>
+        <p>Requirements for establishment:</p>
+        <ul>
+            <li>01. Minimum 10 founding members.</li>
+            <li>02. Minimum 3 elected committee officers.</li>
+            <li>03. Compliant Name</li>
+            <li>04. Balance Date.</li>
+        </ul>
+
+        <h2>[08. Phase 2 Constitution]</h2>
+        <p>Draft the Constitution</p>
+    
+        <h2>[09. Phase 3 The Rego Process]</h2>
+             <ul>
+            <li>01. Initial General Meeting - of founding members</li>
+            <li>02. Pass resolution to incorporate by approving constitution</li>
+            <li>03. Elect the committee, and Nominate Contact Person.</li>
+        </ul>
+        <p>Apply to the Incorporated Society Office</p>
+
+            <p>Promote group with event offering...Mukamuka Munter</p>
+    </div>
+
+    <div class="footer">
+        <p>W.R.E.C'kd / EST. 2026? / </p>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+
+            document.querySelectorAll('nav button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('btn-' + pageId).classList.add('active');
+
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
