@@ -1,0 +1,164 @@
+    <style>
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --gray: #f0f0f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--black);
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.5;
+            padding: 2rem;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 2px solid var(--black);
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            background-color: var(--black);
+            color: var(--white);
+            display: inline-block;
+            padding: 2px 12px;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        nav {
+            margin-bottom: 3rem;
+            display: flex;
+            gap: 0;
+            border: 1px solid var(--black);
+            width: fit-content;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            font-family: 'Courier New', Courier, monospace;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--black);
+        }
+
+        nav button:not(:last-child) {
+            border-right: 1px solid var(--black);
+        }
+
+        nav button.active {
+            background-color: var(--black);
+            color: var(--white);
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        h2 {
+            border-bottom: 1px solid var(--black);
+            display: inline-block;
+            margin: 2.5rem 0 1rem;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        p, ul {
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            border: 1px solid var(--black);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .highlight-box::before {
+            content: "NB";
+            position: absolute;
+            top: -12px;
+            left: 10px;
+            background: var(--white);
+            padding: 0 5px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.85rem;
+        }
+
+        th, td {
+            border: 1px solid var(--black);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--gray);
+            text-transform: uppercase;
+        }
+
+        .footer {
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--black);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-sim {
+            border: 1px solid var(--black);
+            padding: 30px;
+            margin-top: 2rem;
+        }
+
+        .form-line {
+            border-bottom: 1px solid var(--black);
+            height: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 600px) {
+            body { padding: 1.5rem; }
+            h1 { font-size: 1.8rem; }
+            nav { width: 100%; flex-direction: column; }
+            nav button:not(:last-child) { border-right: none; border-bottom: 1px solid var(--black); }
+        }
+    </style>
